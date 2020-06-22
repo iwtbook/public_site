@@ -10,10 +10,6 @@ a {
   text-decoration: underline;
 }
 
-a:hover {
-  text-decoration: none;
-}
-
 body {
   align-items: center;
   background-color: #83B692;
@@ -122,8 +118,8 @@ main>nav li>a {
   align-items: center;
   display: grid;
   grid-template-areas:
-  'name links';
-  grid-template-columns: 1fr auto;
+  'dot name links';
+  grid-template-columns: 50px 1fr auto;
 }
 
 #lessonList li a {
@@ -131,13 +127,22 @@ main>nav li>a {
   text-decoration: none;
 }
 
-#lessonList li img {
+#lessonList li>img {
+  justify-self: center;
+  width: 18px;
+}
+
+#lessonList li>p {
+  margin-left: 5px;
+}
+
+#lessonList li nav img {
   margin-right: 20px;
   transition: 0.1s ease all;
   width: 40px;
 }
 
-#lessonList li img:hover {
+#lessonList li nav img:hover {
   filter: brightness(0.8);
   transition: 0.1s ease all;
 }
@@ -159,8 +164,8 @@ main>nav li>a {
 #lessonList ul li {
   border-radius: 5px;
   font-size: 1.3em;
-  list-style-type: none;
-  padding: 17.5px 0 17.5px 50px;
+  /*list-style-type: none;*/
+  padding: 17.5px 0px;
   transition: 0.1s ease all;
 }
 
@@ -210,4 +215,10 @@ main>nav li>a {
 #underConstructionModal img {
   margin-top: 15px;
   max-width: 150px;
+}
+
+@media only screen and (hover: hover) {
+  a:hover {
+    text-decoration: none;
+  }
 }
