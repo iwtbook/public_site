@@ -5,259 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Introduction to Web Technology</title>
 
-  <!-- Main Stylesheet -->
+  <script>
+    document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
+  </script>
+
+  <!-- Main Styles -->
   <link rel="stylesheet" type="text/css" href="assets/styles/main.css">
-
-  <!-- Raleway Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <header>
-    <h1>Introduction to Web Technology</h1>
+    <h2>Introduction to <span class="breakhere">Web Technology</span></h2>
     <p>taught by Thomas Powell</p>
   </header>
 
   <main>
-    <nav>
-      <h2>Resources</h2>
-      <ul>
-        <li>
-          <a href="https://www.w3.org/TR/html52/">HTML Spec</a>
-        </li>
-        <li>
-          <a href="http://www.htmlref.com/">HTML Quick Ref</a>
-        </li>
-        <li>
-          <a href="#">HTML Element Demos</a>
-        </li>
-        <li>
-          <a href="#">HTML Attribute Demos</a>
-        </li>
-      </ul>
-    </nav>
-
-    <section id="lessonList">
-      <h2>HTML Basics</h2>
-      <p>2 lessons</p>
-      <ul>
-        <li>
-          <img src="assets/images/dot.png" alt="dot">
-          <p>Document Structure</p>
-          <nav>
-            <a href="#" title="Document Structure Notion">
-              <img src="assets/images/notion.png" alt="Notion link">
-            </a>
-            <a href="#" title="Document Structure Video">
-              <img src="assets/images/play.png" alt="Video link">
-            </a>
-            <a href="#" title="Document Structure Examples">
-              <img src="assets/images/coding.png" alt="Code link">
-            </a>
-          </nav>
-        </li>
-        <li>
-          <img src="assets/images/dot.png" alt="dot">
-          <p>Links</p>
-          <nav>
-            <a href="#" title="Link Notion">
-              <img src="assets/images/notion.png" alt="Notion link">
-            </a>
-            <a href="#" title="Link Video">
-              <img src="assets/images/play.png" alt="Video link">
-            </a>
-            <a href="#" title="Link Examples">
-              <img src="assets/images/coding.png" alt="Code link">
-            </a>
-          </nav>
-        </li>
-      </ul>
-      <h2>HTML Forms</h2>
-      <p>6 lessons</p>
-      <ul>
-        <li>
-          <img src="assets/images/dot.png" alt="dot">
-          <p>Form Basics</p>
-          <nav>
-            <a href="#" title="Form Basics Notion">
-              <img src="assets/images/notion.png" alt="Notion link">
-            </a>
-            <a href="#" title="Form Basics Video">
-              <img src="assets/images/play.png" alt="Video link">
-            </a>
-            <a href="#" title="Form Basics Examples">
-              <img src="assets/images/coding.png" alt="Code link">
-            </a>
-          </nav>
-        </li>
-        <li>
-          <img src="assets/images/dot.png" alt="dot">
-          <p>Form Controls</p>
-          <nav>
-            <a href="#" title="Form Controls Notion">
-              <img src="assets/images/notion.png" alt="Notion link">
-            </a>
-            <a href="#" title="Form Controls Video">
-              <img src="assets/images/play.png" alt="Video link">
-            </a>
-            <a href="#" title="Form Controls Examples">
-              <img src="assets/images/coding.png" alt="Code link">
-            </a>
-          </nav>
-        </li>
-        <li>
-          <img src="assets/images/dot.png" alt="dot">
-          <p>Form Accessibility</p>
-          <nav>
-            <a href="#" title="Form Accessibility Notion">
-              <img src="assets/images/notion.png" alt="Notion link">
-            </a>
-            <a href="#" title="Form Accessibility Video">
-              <img src="assets/images/play.png" alt="Video link">
-            </a>
-            <a href="#" title="Form Accessibility Examples">
-              <img src="assets/images/coding.png" alt="Code link">
-            </a>
-          </nav>
-        </li>
-        <li>
-          <img src="assets/images/dot.png" alt="dot">
-          <p>Form Design</p>
-          <nav>
-            <a href="#" title="Form Design Notion">
-              <img src="assets/images/notion.png" alt="Notion link">
-            </a>
-            <a href="#" title="Form Design Video">
-              <img src="assets/images/play.png" alt="Video link">
-            </a>
-            <a href="#" title="Form Design Examples">
-              <img src="assets/images/coding.png" alt="Code link">
-            </a>
-          </nav>
-        </li>
-        <li>
-          <img src="assets/images/dot.png" alt="dot">
-          <p>Forms and HTTP</p>
-          <nav>
-            <a href="#" title="Forms and HTTP Notion">
-              <img src="assets/images/notion.png" alt="Notion link">
-            </a>
-            <a href="#" title="Forms and HTTP Video">
-              <img src="assets/images/play.png" alt="Video link">
-            </a>
-            <a href="#" title="Forms and HTTP Examples">
-              <img src="assets/images/coding.png" alt="Code link">
-            </a>
-          </nav>
-        </li>
-        <li>
-          <img src="assets/images/dot.png" alt="dot">
-          <p>Form Security</p>
-          <nav>
-            <a href="#" title="Form Security Notion">
-              <img src="assets/images/notion.png" alt="Notion link">
-            </a>
-            <a href="#" title="Form Security Video">
-              <img src="assets/images/play.png" alt="Video link">
-            </a>
-            <a href="#" title="Form Security Examples">
-              <img src="assets/images/coding.png" alt="Code link">
-            </a>
-          </nav>
-        </li>
-      </ul>
-      <h2>HTML Temp Lessons</h2>
-      <p>5 lessons</p>
-      <ul>
-        <li>
-          <img src="assets/images/dot.png" alt="dot">
-          <p>HTML Temp</p>
-          <nav>
-            <a href="#" title="HTML Temp Notion">
-              <img src="assets/images/notion.png" alt="Notion link">
-            </a>
-            <a href="#" title="HTML Temp Video">
-              <img src="assets/images/play.png" alt="Video link">
-            </a>
-            <a href="#" title="HTML Temp Examples">
-              <img src="assets/images/coding.png" alt="Code link">
-            </a>
-          </nav>
-        </li>
-        <li>
-          <img src="assets/images/dot.png" alt="dot">
-          <p>HTML Temp</p>
-          <nav>
-            <a href="#" title="HTML Temp Notion">
-              <img src="assets/images/notion.png" alt="Notion link">
-            </a>
-            <a href="#" title="HTML Temp Video">
-              <img src="assets/images/play.png" alt="Video link">
-            </a>
-            <a href="#" title="HTML Temp Examples">
-              <img src="assets/images/coding.png" alt="Code link">
-            </a>
-          </nav>
-        </li>
-        <li>
-          <img src="assets/images/dot.png" alt="dot">
-          <p>HTML Temp</p>
-          <nav>
-            <a href="#" title="HTML Temp Notion">
-              <img src="assets/images/notion.png" alt="Notion link">
-            </a>
-            <a href="#" title="HTML Temp Video">
-              <img src="assets/images/play.png" alt="Video link">
-            </a>
-            <a href="#" title="HTML Temp Examples">
-              <img src="assets/images/coding.png" alt="Code link">
-            </a>
-          </nav>
-        </li>
-        <li>
-          <img src="assets/images/dot.png" alt="dot">
-          <p>HTML Temp</p>
-          <nav>
-            <a href="#" title="HTML Temp Notion">
-              <img src="assets/images/notion.png" alt="Notion link">
-            </a>
-            <a href="#" title="HTML Temp Video">
-              <img src="assets/images/play.png" alt="Video link">
-            </a>
-            <a href="#" title="HTML Temp Examples">
-              <img src="assets/images/coding.png" alt="Code link">
-            </a>
-          </nav>
-        </li>
-        <li>
-          <img src="assets/images/dot.png" alt="dot">
-          <p>HTML Temp</p>
-          <nav>
-            <a href="#" title="HTML Temp Notion">
-              <img src="assets/images/notion.png" alt="Notion link">
-            </a>
-            <a href="#" title="HTML Temp Video">
-              <img src="assets/images/play.png" alt="Video link">
-            </a>
-            <a href="#" title="HTML Temp Examples">
-              <img src="assets/images/coding.png" alt="Code link">
-            </a>
-          </nav>
-        </li>
-      </ul>
-    </section>
-    <div id="modalWrapper">
-      <div id="underConstructionModal">
-        <p>Website under construction</p>
-        <img alt="Hammer and Wrench crossed" src="assets/images/hammer-wrench-white.png" loading="lazy">
+    <section id="mainHeroSection">
+      <div id="mainHeroText">
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button>View Lessons</button>
       </div>
-    </div>
+      <div id="sectionOverlay"></div>
+    </section>
+    <section id="roadMapSection">
+      <div id="roadMapText">
+        <h3>Road Map</h3>
+        <img alt="Car" src="assets/images/road-trip.png">
+      </div>
+      <ol id="roadMapList">
+        <li>
+          <div class="roadMapDestination">
+            <h4>HTML</h4>
+            <img alt="Map to destination" src="assets/images/location.png">
+          </div>
+          <ul>
+            <li>Core HTML</li>
+            <li>HTTP</li>
+            <li>Linking</li>
+            <li>Images and Other Embeds</li>
+            <li>Forms and Interactivity</li>
+          </ul>
+        </li>
+        <li>
+          <div class="roadMapDestination">
+            <h4>CSS</h4>
+            <img alt="Map to destination" src="assets/images/location.png">
+          </div>
+          <ul id="cssTileList">
+            <li>
+              <p>Core CSS</p>
+              <!-- <div class="tileWhiteOverlay"></div> -->
+            </li>
+            <li>
+              <p>Applied CSS</p>
+              <!-- <div class="tileWhiteOverlay"></div> -->
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="roadMapDestination">
+            <h4>JavaScript</h4>
+            <img alt="Map to destination" src="assets/images/location.png">
+          </div>
+          <ul>
+            <li>Core JavaScript</li>
+            <li>Applied JavaScript - Client Side</li>
+            <li>Applied JavaScript - Server Side</li>
+          </ul>
+        </li>
+        <li>
+          <div class="roadMapDestination">
+            <h4>General Web Development</h4>
+            <img alt="Map to destination" src="assets/images/location.png">
+          </div>
+          <ul>
+            <li>Web Design Process</li>
+            <li>Web Architectural Patterns</li>
+            <li>Delivery</li>
+            <li>Accessibility</li>
+            <li>Security</li>
+            <li>Performance</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
   </main>
 
-  <footer>
-    <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, <a href="https://www.flaticon.com/authors/tomas-knop">Tomas Knop</a>, and <a href="https://www.flaticon.com/authors/roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-    </p>
+  <footer style="color:black;">
+    <p>Icons made by <a href="https://www.flaticon.com/authors/xnimrodx" title="xnimrodx">xnimrodx</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
   </footer>
 </body>
-
 </html>

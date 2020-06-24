@@ -1,18 +1,16 @@
-/* Main Stylesheet */
-
 * {
   margin: 0;
   padding: 0;
 }
 
 a {
-  color: white;
+  color: black;
   text-decoration: underline;
 }
 
 body {
   align-items: center;
-  background-color: #83B692;
+  background-color: #e1ebe4;
   color: white;
   display: grid;
   font-family: 'Raleway', sans-serif;
@@ -21,18 +19,25 @@ body {
 }
 
 footer {
-  margin-bottom: 20px;
+  bottom: 0;
+  display: none;
+  position: absolute;
+  text-align: center;
+  transform: translateX(50vw);
+  margin: 0 0 15px -180px;
+  width: 360px;
 }
 
 header {
   align-self: flex-start;
-  background-color: #447452;
+  background-color: #040f00;
   padding: 20px 0 23px 0;
   width: 100%;
 }
 
-header>h1 {
+header>h2 {
   color: white;
+  font-size: 2em;
   margin-left: 20px;
 }
 
@@ -42,183 +47,292 @@ header>p {
 }
 
 main {
+  width: 100%;
+}
+
+#mainHeroSection {
+  background: url('../images/hero-desktop-raw.jpg');
+  background-color: #cccccc;
+  background-position: 0% 65%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  max-width: 100vw;
+  min-width: 100%;
+}
+
+#mainHeroText {
+  align-items: flex-start;
   display: grid;
-  height: auto;
-  margin: 40px auto 40px auto;
+  font-size: 2em;
+  grid-template-areas:
+  'empty'
+  'h1'
+  'p'
+  'button'
+  'empty2';
+  grid-template-rows: 20% auto auto auto 20%;
+  height: 600px;
+  text-shadow: 1px 1px 4px black;
+  transform: translateX(50vw);
+  margin-left: -25vw;
+  position: absolute;
+  width: 50%;
 }
 
-main>nav {
-  background-color: white;
-  border-bottom: 5px solid rgb(196, 196, 196);
-  border-radius: 10px;
-  color: black;
-  height: auto;
-  max-height: 282px;
-  justify-self: center;
-  left: 0;
-  padding: 20px 15px;
-  position: fixed;
-  top: 146px;
-  transform: translateX(calc(50vw - 720px));
-  width: 270px;
+#mainHeroText h1 {
+  align-self: flex-end;
+  grid-area: h1;
+  margin-bottom: 20px;
 }
 
-main>nav h2 {
-  margin-left: 10px;
+#mainHeroText p {
+  grid-area: p;
 }
 
-main>nav li:first-child {
-  border-top: 1px solid #c4c4c4;
+#mainHeroText button {
+  background-color: rgb(212, 0, 0);
+  border-radius: 8px;
+  border: none;
+  border-bottom: 3px solid rgb(138, 1, 1);
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.6em;
+  font-weight: bold;
+  grid-area: button;
+  height: 45px;
+  transition: 0.2s ease all;
+  width: 200px;
+}
+
+#mainHeroText button:active {
+  border: none;
+  cursor: pointer;
+  filter: brightness(0.7);
+  transition: none;
+}
+
+#roadMapList {
+  display: grid;
+  margin: 0 auto;
+  width: 1275px;
+}
+
+#roadMapList ul {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 
-main>nav li {
-  border-bottom: 1px solid rgb(196, 196, 196);  
-  font-size: 1.2em;
+#roadMapList ul li {
+  background-color: white;
+  border-radius: 5px;
+  color: rgb(90, 90, 90);
+  display: block;
+  height: 105px;
+  min-height: 80px;
+  margin: 0 20px 0 5px;
+  padding: 15px 15px 18px 15px;
+  transition: 0.2s ease all;
+  user-select: none;
+  width: 200px;
+}
+
+#cssTileList li {
+  background-color: white;
+  color: black !important;
+}
+
+.tileWhiteOverlay {
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 5px;
+  height: 138px;
+  margin: -25px 0 0 -15px;
+  width: 230px
+}
+
+#roadMapSection {
+  color: black;
+  display: grid;
+  justify-items: center;
+  font-size: 1.8em;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#roadMapSection ol {
+  list-style-type: upper-roman;
+}
+
+#roadMapSection ol li {
+  margin-bottom: 30px;
+}
+
+.roadMapDestination {
+  display: flex;
+}
+
+.roadMapDestination h4 {
+  align-self: flex-end;
+  margin-left: 10px;
+}
+
+.roadMapDestination img {
+  margin-left: 20px;
+  width: 60px;
+}
+
+#roadMapSection ul {
   list-style-type: none;
-  padding: 20px 10px;
-  transition: 0.1s ease all;
 }
 
-main>nav li:last-child {
-  border-bottom: none;
-}
-
-main>nav li:hover {
-  background-color: rgb(243, 243, 243);
-  cursor: pointer;
-  transition: 0.1s ease all;
-}
-
-main>nav li>a {
-  color: black;
-  text-decoration: none;
-}
-
-#lessonList {
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
-  border-bottom: 5px solid rgb(196, 196, 196);;
-  color: black;
-  grid-area: demos;
-  height: auto;
-  justify-self: flex-start;
-  overflow-y: visible;
-  padding: 30px;
-  width: 700px;
-}
-
-#lessonList h2:not(:first-child) {
-  border-top: 1px solid rgb(196, 196, 196);
-  margin-top: 17.5px;
-  padding-top: 35px;
-}
-
-#lessonList li {
+#roadMapText {
   align-items: center;
+  column-gap: 25px;
   display: grid;
   grid-template-areas:
-  'dot name links';
-  grid-template-columns: 50px 1fr auto;
+  'text car';
+  grid-template-columns: auto;
+  justify-items: center;
+  width: 305px;
 }
 
-#lessonList li a {
-  color: black;
-  text-decoration: none;
+#roadMapText img {
+  width: 100px;
 }
 
-#lessonList li>img {
-  justify-self: center;
-  width: 18px;
-}
-
-#lessonList li>p {
-  margin-left: 5px;
-}
-
-#lessonList li nav img {
-  margin-right: 20px;
-  transition: 0.1s ease all;
-  width: 40px;
-}
-
-#lessonList li nav img:hover {
-  filter: brightness(0.8);
-  transition: 0.1s ease all;
-}
-
-#lessonList li nav {
-  justify-self: flex-end;
-}
-
-#lessonList>p {
-  color: rgb(148, 148, 148);
-  font-size: 1.1em;
-  margin-top: 10px;
-}
-
-#lessonList ul {
-  margin-top: 10px;
-}
-
-#lessonList ul li {
-  border-radius: 5px;
-  font-size: 1.3em;
-  /*list-style-type: none;*/
-  padding: 17.5px 0px;
-  transition: 0.1s ease all;
-}
-
-#lessonList ul li:hover {
-  background-color: rgb(242, 242, 242);
-  cursor: pointer;
-  transition: 0.1s ease all;
-}
-
-#lessonList .dotLink {
-  margin: 5px 0 0 -40px;
-  position: absolute;
-}
-
-#lessonList .rectLink {
-  margin: 20px 0 0 -33px;
-  position: absolute;
-}
-
-#modalWrapper {
-  background-color: rgba(0,0,0,0.7);
-  display: none;
-  height: 100vh;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  z-index: 2;
-}
-
-#underConstructionModal {
-  background-color: rgba(150, 150, 150, 0.75);
-  border-radius: 5px;
-  color: white;
-  display: none;
-  font-size: 1.6em;
-  height: 200px;
-  left: 50%;
-  transform: translate(-217.5px, -150px);
-  padding: 50px;
-  position: absolute;
-  top: 50%;
-  width: 335px;
-  z-index: 3;
-}
-
-#underConstructionModal img {
-  margin-top: 15px;
-  max-width: 150px;
+#sectionOverlay {
+  background-color: rgba(0,45,0,0.70);
+  height: 100%;
+  width: 100%;
 }
 
 @media only screen and (hover: hover) {
   a:hover {
     text-decoration: none;
+  }
+  
+  #roadMapList ul li:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    filter: drop-shadow(3px 4px 4px rgba(0,0,0,0.4));
+    transition: 0.2s ease all;
+  }
+  
+  #roadMapList ul li:active {
+    transform: scale(1.02);
+    transition: none;
+  }
+
+  #mainHeroText button:hover {
+    cursor: pointer;
+    filter: brightness(0.9);
+    transition: 0.2s ease all;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  #mainHeroText {
+    margin-left: -32.5vw;
+    width: 65%;
+  }
+
+  #roadMapList {
+    width: 770px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .roadMapDestination {
+    display: inline-block;
+  }  
+
+  .roadMapDestination h4 {
+    display: inline;
+  }
+
+  #mainHeroText {
+    font-size: 1.8em;
+    grid-template-rows: 10% auto auto auto 30%;
+    height: 500px;
+    margin-left: -40vw;
+    width: 80%;
+  }
+
+  #mainHeroText button {
+    margin-top: 20px;
+  }
+
+  #mainHeroSection {
+    height: 400px;
+  }
+
+  #roadMapList {
+    padding-left: 25px;
+  }
+
+  #roadMapSection ol {
+    list-style-position: inside
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    font-size :0.9em;
+  }
+
+  #roadMapList ul li {
+    height: 105px;
+    width: 150px;
+  }
+
+  #roadMapList {
+    width: 615px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  body {
+    font-size :0.7em;
+  }
+
+  #roadMapList ul li {
+    min-height: 0;
+    height: 95px;
+    width: 110px;
+  }
+
+  #roadMapList {
+    padding-left: 0 !important;
+    width: 495px;
+  }
+
+  #roadMapText {
+    margin-bottom: 36px;
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  header {
+    font-size: 0.8em;
+  }
+
+  #mainHeroText {
+    font-size: 1.6em;
+  }
+
+  #roadMapList {
+    width: 330px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .breakhere {
+    display: block;
+  }
+
+  #mainHeroText {
+    font-size: 1.4em;
   }
 }
