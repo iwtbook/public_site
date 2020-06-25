@@ -252,7 +252,6 @@ main {
   }
 
   #mainHeroText {
-    font-size: 1.8em;
     grid-template-rows: 10% auto auto auto 30%;
     height: 500px;
     margin-left: -40vw;
@@ -277,11 +276,8 @@ main {
 }
 
 @media only screen and (max-width: 800px) {
-  body {
-    font-size :0.9em;
-  }
-
   #roadMapList ul li {
+    font-size: 0.9em;
     height: 105px;
     width: 150px;
   }
@@ -292,11 +288,12 @@ main {
 }
 
 @media only screen and (max-width: 650px) {
-  body {
-    font-size :0.7em;
+  #mainHeroSection {
+    font-size: 0.9em;
   }
 
   #roadMapList ul li {
+    font-size: 0.63em;
     min-height: 0;
     height: 95px;
     width: 110px;
@@ -309,30 +306,97 @@ main {
 
   #roadMapText {
     margin-bottom: 36px;
-    font-size: 1.5em;
+  }
+
+  #roadMapList h4 {
+    line-height: 0.9;
   }
 }
 
 @media only screen and (max-width: 550px) {
+  .breakhere {
+    display: block;
+  }
+
   header {
-    font-size: 0.8em;
+    display: grid;
+    font-size: 0.9em;
+    grid-template-areas:
+    'title name';
+    padding: 10px 0;
+  }
+
+  header p {
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-right: 15px;
+    text-align: right;
+  }
+
+  #mainHeroSection {
+    height: 375px;
   }
 
   #mainHeroText {
     font-size: 1.6em;
+    height: 448px;
+  }
+
+  #mainHeroText button {
+    font-size: 0.75em;
+    width: 150px;
   }
 
   #roadMapList {
     width: 330px;
   }
+
+  #roadMapList h4 {
+    font-size: 0.9em;
+  }
+
+  #roadMapList h4:last-child {
+    font-size: 0.5em;
+  }
+
+  #roadMapList img {
+    margin-left: 10px;
+    width: 40px;
+  }
 }
 
-@media only screen and (max-width: 450px) {
-  .breakhere {
-    display: block;
+@media only screen and (max-width: 400px) {
+  header h2 {
+    font-size: 1.6em;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  header h2 {
+    font-size: 1.4em;
   }
 
   #mainHeroText {
-    font-size: 1.4em;
+    font-size: 1.5em;
+  }
+
+  #mainHeroText button {
+    font-size: 0.75em;
+  }
+
+  #roadMapList {
+    margin-left: 25px;
+  }
+
+  #roadMapList ul li {
+    font-size: 0.56em;
+    min-height: 0;
+    height: 85px;
+    width: 95px;
+  }
+
+  #roadMapList {
+    margin-left: 20px;
+    width: 300px;
   }
 }

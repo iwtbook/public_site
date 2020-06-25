@@ -12,7 +12,7 @@ a {
 
 body {
   align-items: center;
-  background-color: #83B692;
+  background-color: #e1ebe4;
   color: white;
   display: grid;
   font-family: 'Raleway', sans-serif;
@@ -26,7 +26,7 @@ footer {
 
 header {
   align-self: flex-start;
-  background-color: #447452;
+  background-color: #040f00;
   padding: 20px 0 23px 0;
   width: 100%;
 }
@@ -98,7 +98,7 @@ main>nav li>a {
 #lessonList {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
-  border-bottom: 5px solid rgb(196, 196, 196);;
+  border-bottom: 5px solid rgb(196, 196, 196);
   color: black;
   grid-area: demos;
   height: auto;
@@ -109,7 +109,6 @@ main>nav li>a {
 }
 
 #lessonList h2:not(:first-child) {
-  border-top: 1px solid rgb(196, 196, 196);
   margin-top: 17.5px;
   padding-top: 35px;
 }
@@ -118,8 +117,8 @@ main>nav li>a {
   align-items: center;
   display: grid;
   grid-template-areas:
-  'dot name links';
-  grid-template-columns: 50px 1fr auto;
+  'name links';
+  grid-template-columns: 1fr auto;
 }
 
 #lessonList li a {
@@ -127,24 +126,39 @@ main>nav li>a {
   text-decoration: none;
 }
 
-#lessonList li>img {
-  justify-self: center;
-  width: 18px;
+#lessonList li>a {
+  border-radius: 5px;
+  display: grid;
+  grid-template-areas: 'img p';
+  justify-self: flex-start;
+  padding: 0 20px 3px 0;
 }
 
-#lessonList li>p {
+#lessonList li>a:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+#lessonList li>a>img {
+  float: left;
+  width: 30px;
+}
+
+#lessonList li p {
+  align-self: center;
   margin-left: 5px;
 }
 
-#lessonList li nav img {
+#lessonList li nav img,
+#lessonList li a>img {
   filter: brightness(0.85);
-  margin-right: 20px;
+  padding: 10px 15px;
   transition: 0.1s ease all;
   width: 40px;
 }
 
 #lessonList li nav img:hover {
-  filter: brightness(0.8);
+  background-color: rgba(180,180,180,0.2);
+  border-radius: 5px;
   transition: 0.1s ease all;
 }
 
@@ -163,17 +177,14 @@ main>nav li>a {
 }
 
 #lessonList ul li {
-  border-radius: 5px;
+  border-bottom: 1px solid #c4c4c4;
   font-size: 1.3em;
-  /*list-style-type: none;*/
-  padding: 17.5px 0px;
+  padding: 12.5px 0px;
   transition: 0.1s ease all;
 }
 
-#lessonList ul li:hover {
-  background-color: rgb(242, 242, 242);
-  cursor: pointer;
-  transition: 0.1s ease all;
+#lessonList ul li:last-child {
+  border-bottom: none;
 }
 
 #lessonList .dotLink {
