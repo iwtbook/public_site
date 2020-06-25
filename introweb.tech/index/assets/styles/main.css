@@ -31,17 +31,23 @@ footer {
 header {
   align-self: flex-start;
   background-color: #040f00;
+  color: white;
   padding: 20px 0 23px 0;
   width: 100%;
 }
 
-header>h2 {
+header>a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+header h2 {
   color: white;
   font-size: 2em;
   margin-left: 20px;
 }
 
-header>p {
+header p {
   color: white;
   margin: 7px 0 0 20px;
 }
@@ -90,7 +96,7 @@ main {
   grid-area: p;
 }
 
-#mainHeroText button {
+#mainHeroText a {
   background-color: rgb(212, 0, 0);
   border-radius: 8px;
   border: none;
@@ -100,13 +106,16 @@ main {
   font-size: 0.6em;
   font-weight: bold;
   grid-area: button;
-  height: 45px;
+  padding: 10px 0 15px 0;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
   transition: 0.2s ease all;
   width: 200px;
 }
 
-#mainHeroText button:active {
-  border: none;
+#mainHeroText a:active {
+  background-color: rgb(180, 0, 0);
   cursor: pointer;
   filter: brightness(0.7);
   transition: none;
@@ -224,7 +233,7 @@ main {
     transition: none;
   }
 
-  #mainHeroText button:hover {
+  #mainHeroText a:hover {
     cursor: pointer;
     filter: brightness(0.9);
     transition: 0.2s ease all;
@@ -258,7 +267,7 @@ main {
     width: 80%;
   }
 
-  #mainHeroText button {
+  #mainHeroText a {
     margin-top: 20px;
   }
 
@@ -342,7 +351,7 @@ main {
     height: 448px;
   }
 
-  #mainHeroText button {
+  #mainHeroText a {
     font-size: 0.75em;
     width: 150px;
   }
@@ -380,7 +389,7 @@ main {
     font-size: 1.5em;
   }
 
-  #mainHeroText button {
+  #mainHeroText a {
     font-size: 0.75em;
   }
 

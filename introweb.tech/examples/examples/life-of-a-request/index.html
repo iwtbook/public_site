@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life of a Request</title>
+    <link rel="stylesheet" href="./style.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!--
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> link this up--> 
+</head>
+<body>
+    <header>
+        <a href="https://introweb.tech" title="Home">
+            <h1>IWT - Examples</h1>
+            <p>taught by Thomas Powell</p>
+        </a>
+    </header>    
+    <h2>Life of a Request</h2>
+    <!-- local svg; local image; local js (date, time, browser, lang, console log); remote video -->
+    <div id="grid-container">
+        <section id="desc1">
+            This page is intended to demonstrate the lifecycle of an HTTP request. This page will load local images and scripts and well as third party videos and scripts. 
+            Navigate to the Network tab of your Developer Tools and refresh the page to see the different requests made and responses received.
+        </section>
+        <img id="catpic" src="./cat.jpg" alt="A photo of a gray cat" title="Cats are cool" height="400px"><br/>
+        <figure id="vid" >
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pHFWGN-upGM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <figcaption>A third party video explaining the HTTP request lifecycle</figcaption>
+        </figure>
+        <section id="desc2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium lectus at convallis sodales. Ut ac molestie risus, vel finibus eros. Donec quis leo enim. Vestibulum a molestie nisl, in efficitur velit. Proin tempus rhoncus mi eu semper. Vestibulum imperdiet velit at molestie iaculis. 
+            Quisque venenatis et orci bibendum molestie. Suspendisse volutpat turpis at turpis sagittis, sit amet ultricies tellus elementum. Donec vel turpis sit amet diam consectetur porta quis id metus. Donec ac ultrices nulla. Nullam eu urna sit amet erat scelerisque euismod id vitae elit. Nulla volutpat
+            urna quis sapien volutpat imperdiet. In lobortis maximus hendrerit. Praesent posuere neque sed auctor placerat. Donec in lobortis ex, sit amet iaculis sapien.
+            <br/>
+        </section>
+    </div>
+    <h2>Using Local JavaScript - Your Stats</h2>
+    <div id="stats-wrapper"><output id="stats"></output></div><br/>
+    <script src="./main.js"></script>
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+</body>
+</html>

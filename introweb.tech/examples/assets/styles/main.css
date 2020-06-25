@@ -4,13 +4,13 @@
 }
 
 a {
-  color: white;
+  color: black;
   text-decoration: underline;
 }
 
 body {
   align-items: center;
-  background-color: #83B692;
+  background-color: #e1ebe4;
   color: white;
   display: grid;
   font-family: 'Raleway', sans-serif;
@@ -20,17 +20,73 @@ body {
 
 header {
   align-self: flex-start;
-  background-color: #447452;
+  background-color: #040f00;
   padding: 20px 0 23px 0;
+  position: fixed;
   width: 100%;
+  z-index: 4;
 }
 
-header>h1 {
+header>a {
+  display: grid;
+  display: inline-block;
+  text-decoration: none;
+}
+
+header h1 {
   color: white;
   margin-left: 20px;
 }
 
-header>p {
+header p {
   color: white;
   margin: 7px 0 0 20px;
+}
+
+main {
+  margin-top: 110px;
+}
+
+main h2 {
+  color: black;
+  margin: 40px 0 20px 0;
+  padding-left: 10px;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#exampleList {
+  list-style-type: lower-roman;
+  margin: 0 auto;
+  width: 50vw
+}
+
+#exampleList a {
+  text-decoration: none;
+}
+
+#exampleList li {
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  display: grid;
+  font-size: 1.3em;
+  height: 40px;
+  margin: 0 auto;
+  padding: 5px 20px;
+  transition: 0.1s ease all;
+  width: calc(100% - 40px);
+}
+
+#exampleList li:hover {
+  background-color: #0a7c00;
+  cursor: pointer;
+  transition: 0.1s ease all;
+}
+
+#exampleList li:hover>a {
+  color: white;
 }
