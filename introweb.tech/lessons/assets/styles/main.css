@@ -12,10 +12,10 @@ a {
 
 body {
   align-items: center;
-  background-color: #e1ebe4;
+  background-color: #F0F1FA;
   color: white;
   display: grid;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Inter', sans-serif;
   justify-items: center;  
   text-align: left;
 }
@@ -26,33 +26,28 @@ footer {
 
 header {
   align-self: flex-start;
-  background-color: #040f00;
+  background-color: #161B40;
+  color: white;
   padding: 20px 0 23px 0;
   position: fixed;
   width: 100%;
-  z-index: 4;
+  z-index: 2;
 }
 
 header>a {
-  display: grid;
   display: inline-block;
   text-decoration: none;
 }
 
-header h1 {
-  color: white;
+header img {
   margin-left: 20px;
-}
-
-header p {
-  color: white;
-  margin: 7px 0 0 20px;
+  width: 350px;
 }
 
 main {
   display: grid;
   height: auto;
-  margin: 40px auto 40px auto;
+  margin: 146px auto 40px auto;
 }
 
 main>nav {
@@ -84,8 +79,14 @@ main>nav li {
   border-bottom: 1px solid rgb(196, 196, 196);  
   font-size: 1.2em;
   list-style-type: none;
-  padding: 20px 10px;
+  /* padding: 20px 10px; */
   transition: 0.1s ease all;
+}
+
+main>nav li a {
+  display: block;
+  padding: 20px 0 20px 10px;
+  width: calc(100% - 10px);
 }
 
 main>nav li:last-child {
@@ -111,7 +112,6 @@ main>nav li>a {
   grid-area: demos;
   height: auto;
   justify-self: flex-start;
-  margin-top: 105px;
   overflow-y: visible;
   padding: 30px;
   width: 700px;
@@ -330,6 +330,7 @@ main>nav li>a {
   main>nav ul {
     color: white;
     filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.651));
+    margin-top: -4px;
     transform: translateX(270px);
     transition: 0.2s ease all;
   }
@@ -367,7 +368,7 @@ main>nav li>a {
   }
 
   #navHamburger:checked ~ ul {
-    background-color: #040f00;
+    background-color: #161b40;
     display: block;
     transform: translateX(0px);
     transition: 0.2s ease all;
@@ -378,8 +379,78 @@ main>nav li>a {
   }
 }
 
+@media only screen and (max-width: 800px) and (hover: none) {
+  main>nav ul {
+    margin-top: -12px;
+  }
+}
+
+@media only screen and (max-width: 450px) and (hover: none) {
+  main>nav ul {
+    margin-top: -20px;
+  }
+}
+
+@media only screen and (max-width: 350px) and (hover: none) {
+  main>nav ul {
+    margin-top: -24px;
+  }
+}
+
 @media only screen and (max-width: 800px) {
+  header img {
+    width: 300px;
+  }
+
+  main {
+    margin-top: 135px;
+  }
+
   #lessonList {
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #lessonList {
+    font-size: 0.8em;
+    padding: 20px;
+  }
+
+  #lessonList img {
+    padding: 10px 5px !important;
+    width: 30px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    margin-top: 120px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header img {
+    width: 250px;
+  }
+
+  main {
+    margin-top: 88px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  header img {
+    width: 220px;
+  }
+
+  #lessonList {
+    font-size: 0.75em;
+    padding: 20px;
+  }
+
+  #lessonList img {
+    padding: 10px 0px !important;
+    width: 10px;
   }
 }

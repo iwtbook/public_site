@@ -10,10 +10,10 @@ a {
 
 body {
   align-items: center;
-  background-color: #e1ebe4;
+  background-color: #F0F1FA;
   color: white;
   display: grid;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Inter', sans-serif;
   justify-items: center;  
   text-align: left;
 }
@@ -30,10 +30,12 @@ footer {
 
 header {
   align-self: flex-start;
-  background-color: #040f00;
+  background-color: #161B40;
   color: white;
   padding: 20px 0 23px 0;
+  position: fixed;
   width: 100%;
+  z-index: 10;
 }
 
 header>a {
@@ -41,19 +43,41 @@ header>a {
   text-decoration: none;
 }
 
-header h2 {
-  color: white;
-  font-size: 2em;
+header img {
   margin-left: 20px;
-}
-
-header p {
-  color: white;
-  margin: 7px 0 0 20px;
+  width: 350px;
 }
 
 main {
+  margin-top: 101.5px;
   width: 100%;
+}
+
+.roadMapDestination {
+  display: flex;
+}
+
+.roadMapDestination h4 {
+  align-self: flex-end;
+  margin-left: 10px;
+}
+
+.roadMapDestination img {
+  margin-left: 20px;
+  width: 60px;
+}
+
+.tileWhiteOverlay {
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 5px;
+  height: 138px;
+  margin: -25px 0 0 -15px;
+  width: 230px
+}
+
+#cssTileList li {
+  background-color: white;
+  color: black !important;
 }
 
 #mainHeroSection {
@@ -97,12 +121,12 @@ main {
 }
 
 #mainHeroText a {
-  background-color: rgb(212, 0, 0);
+  background-color: #F40058;
   border-radius: 8px;
   border: none;
   border-bottom: 3px solid rgb(138, 1, 1);
   color: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.6em;
   font-weight: bold;
   grid-area: button;
@@ -147,19 +171,6 @@ main {
   width: 200px;
 }
 
-#cssTileList li {
-  background-color: white;
-  color: black !important;
-}
-
-.tileWhiteOverlay {
-  background-color: rgba(255,255,255,0.6);
-  border-radius: 5px;
-  height: 138px;
-  margin: -25px 0 0 -15px;
-  width: 230px
-}
-
 #roadMapSection {
   color: black;
   display: grid;
@@ -175,20 +186,6 @@ main {
 
 #roadMapSection ol li {
   margin-bottom: 30px;
-}
-
-.roadMapDestination {
-  display: flex;
-}
-
-.roadMapDestination h4 {
-  align-self: flex-end;
-  margin-left: 10px;
-}
-
-.roadMapDestination img {
-  margin-left: 20px;
-  width: 60px;
 }
 
 #roadMapSection ul {
@@ -211,7 +208,7 @@ main {
 }
 
 #sectionOverlay {
-  background-color: rgba(0,45,0,0.70);
+  background-color: rgba(22, 27, 64, 0.5);
   height: 100%;
   width: 100%;
 }
@@ -285,6 +282,14 @@ main {
 }
 
 @media only screen and (max-width: 800px) {
+  header img {
+    width: 300px;
+  }
+
+  main {
+    margin-top: 94px;
+  }
+
   #roadMapList ul li {
     font-size: 0.9em;
     height: 105px;
@@ -328,18 +333,11 @@ main {
   }
 
   header {
-    display: grid;
-    font-size: 0.9em;
-    grid-template-areas:
-    'title name';
     padding: 10px 0;
   }
 
-  header p {
-    align-self: flex-end;
-    justify-self: flex-end;
-    margin-right: 15px;
-    text-align: right;
+  main {
+    margin-top: 70px;
   }
 
   #mainHeroSection {
@@ -374,15 +372,23 @@ main {
   }
 }
 
-@media only screen and (max-width: 400px) {
-  header h2 {
-    font-size: 1.6em;
+@media only screen and (max-width: 450px) {
+  header img {
+    width: 250px;
+  }
+
+  main {
+    margin-top: 62px;
   }
 }
 
 @media only screen and (max-width: 350px) {
-  header h2 {
-    font-size: 1.4em;
+  header img {
+    width: 220px;
+  }
+
+  main {
+    margin-top: 55px;
   }
 
   #mainHeroText {

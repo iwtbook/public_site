@@ -28,7 +28,6 @@ header {
 }
 
 header>a {
-  display: grid;
   display: inline-block;
   text-decoration: none;
 }
@@ -65,6 +64,8 @@ ul {
 }
 
 #exampleList a {
+  display: block;
+  padding: 10px 20px;
   text-decoration: none;
 }
 
@@ -74,9 +75,6 @@ ul {
   border-radius: 5px;
   display: grid;
   font-size: 1.3em;
-  height: 40px;
-  margin: 0 auto;
-  padding: 5px 20px;
   transition: 0.1s ease all;
   width: calc(100% - 40px);
 }
