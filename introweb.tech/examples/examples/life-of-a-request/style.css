@@ -10,7 +10,7 @@ a {
   
 body {
 align-items: center;
-background-color: #e1ebe4;
+background-color: #F0F1FA;
 color: white;
 display: grid;
 font-family: 'Raleway', sans-serif;
@@ -29,29 +29,24 @@ h2:first-of-type {
 }
 
 header {
-  align-self: flex-start;
-  background-color: #040f00;
-  padding: 20px 0 23px 0;
-  position: fixed;
-  width: 100%;
-  z-index: 4;
-}
-
-header>a {
-  display: grid;
-  display: inline-block;
-  text-decoration: none;
-}
-
-header h1 {
-  color: white;
-  margin-left: 20px;
-}
-
-header p {
-  color: white;
-  margin: 7px 0 0 20px;
-}
+    align-self: flex-start;
+    background-color: #161B40;
+    color: white;
+    padding: 20px 0 23px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  header>a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  header img {
+    margin-left: 20px;
+    width: 350px;
+  }
 
 section {
     align-self: center;
@@ -64,8 +59,14 @@ section {
 
 #catpic {
     float: right;
-    height: 300px;
+    /* height: 300px; */
+    height: auto;
+    width: 90%;
     grid-area: pic;
+}
+
+#vid iframe {
+    width: 90%;
 }
 
 #stats-wrapper {
@@ -91,6 +92,7 @@ section {
     overflow-y: visible;
     padding: 40px 0px;
     row-gap: 40px;
+    width: 80%;
 }
 
 #vid{
@@ -107,4 +109,22 @@ section {
 
 #desc2{
     grid-area: desc2;
+}
+
+@media only screen and (max-width: 800px) {
+    header img {
+        width: 300px;
+      }
+}
+
+@media only screen and (max-width: 450px) {
+    header img {
+      width: 250px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    header img {
+        width: 220px;
+    } 
 }

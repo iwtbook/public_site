@@ -52,18 +52,17 @@ main {
 
 main>nav {
   background-color: white;
-  border-bottom: 5px solid rgb(196, 196, 196);
-  border-radius: 10px;
-  color: black;
-  height: auto;
-  max-height: 282px;
-  justify-self: center;
-  left: 0;
-  padding: 20px 15px;
-  position: fixed;
-  top: 146px;
-  transform: translateX(calc(50vw - 720px));
-  width: 270px;
+    border-bottom: 5px solid rgb(196, 196, 196);
+    border-radius: 10px;
+    color: black;
+    height: auto;
+    justify-self: center;
+    left: 0;
+    padding: 20px 15px 0 15px;
+    position: fixed;
+    top: 146px;
+    transform: translateX(calc(50vw - 720px));
+    width: 270px;
 }
 
 main>nav h2 {

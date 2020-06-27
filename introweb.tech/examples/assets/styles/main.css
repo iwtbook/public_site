@@ -10,7 +10,7 @@ a {
 
 body {
   align-items: center;
-  background-color: #e1ebe4;
+  background-color: #F0F1FA;
   color: white;
   display: grid;
   font-family: 'Raleway', sans-serif;
@@ -20,11 +20,12 @@ body {
 
 header {
   align-self: flex-start;
-  background-color: #040f00;
+  background-color: #161B40;
+  color: white;
   padding: 20px 0 23px 0;
   position: fixed;
   width: 100%;
-  z-index: 4;
+  z-index: 2;
 }
 
 header>a {
@@ -32,14 +33,9 @@ header>a {
   text-decoration: none;
 }
 
-header h1 {
-  color: white;
+header img {
   margin-left: 20px;
-}
-
-header p {
-  color: white;
-  margin: 7px 0 0 20px;
+  width: 350px;
 }
 
 main {
@@ -75,16 +71,35 @@ ul {
   border-radius: 5px;
   display: grid;
   font-size: 1.3em;
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.4));
   transition: 0.1s ease all;
   width: calc(100% - 40px);
 }
 
 #exampleList li:hover {
-  background-color: #0a7c00;
+  background-color: #130d47;
   cursor: pointer;
   transition: 0.1s ease all;
 }
 
 #exampleList li:hover>a {
   color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  header img {
+      width: 300px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+  header img {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  header img {
+      width: 220px;
+  } 
 }
